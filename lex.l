@@ -35,7 +35,7 @@ vars ([A-Z]((\$|\#|\@)*[a-zA-Z]*[0-9]*)*){0,11}
 "Enddo" {return END_LOOP;}
 
 "For" {return INIT_FOR;}
-"Times" {return TIMES;} /* REVISAR!!! */
+"Times" {return TIMES;}
 "FEnd" {return END_FOR;}
 
 "If" {return INIT_IF;}
