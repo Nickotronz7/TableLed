@@ -6,6 +6,16 @@
 #include <QtGui>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QKeyEvent>
+#include <QtGui>
+#include <QDockWidget>
+#include <QGraphicsPixmapItem>
+#include <QImage>
+#include <QGraphicsScene>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
 
 namespace Ui {
 class MainWindow;
@@ -19,7 +29,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+
+    bool eventFilter(QObject *watched, QEvent *event);
+
+    void insertKeywords(QString words, QTextCursor cursors, std::string color);
+
+
 private slots:
+    void veryKeywords();
+
     void on_actionNew_triggered();
 
     void on_actionOpen_triggered();
